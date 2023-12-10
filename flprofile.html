@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peeps - Get Your Errands Done</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+    
+<style>
+   
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+   
+  border: 1px solid #e3e3e3;
+  border-radius: 14px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+.well-legend {
+  display: block;
+  font-size: 16px;
+    font-weight: bolder;
+  width: auto;
+  padding: 2px 7px 2px 5px;
+  margin-bottom: 20px;
+  line-height: inherit;
+  color: #333;
+  background: #fff;
+     
+} 
+
+  .serv-card {
+    position: relative;
+/*    filter: brightness(80%);*/
+    height: 100%;
+  }
+
+  .serv-card .card-img-top {
+    object-fit: cover;
+    height: 100%;
+      filter: brightness(80%);
+  }
+
+   .card:hover .card-img-top {
+    filter: brightness(70%);
+  }
+
+  .serv-card .card:hover .card-body {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+
+  .serv-card .card-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+     .horizontal-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .horizontal-list li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+    .fl-card img{
+         height: 200px; /* Adjust the height as needed */
+  object-fit: cover;
+    }
+    .clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /* Number of lines to show */
+  /* Adjust line height and max-height as needed */
+   
+  max-height: 5em; /* Show 2 lines with ellipsis */
+}
+        .background-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Adjust darkness by changing the alpha value */
+}
+    .serv-card, .fl-card {
+  /* Other styles for .serv-card */
+
+  /* Cursor changes to pointer on hover */
+  cursor: pointer;
+}
+</style>
+<body>
+ 
+    
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top   d-ngone" style="background-color: rgba(0, 0, 0, 0.7);" id="navbar">
+  <a class="navbar-brand text-white" href="index.html">Peep</a>
+  <!-- Responsive hamburger menu -->
+    
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+         <li class="nav-item"><a class="nav-link text-white" href="allfreelancers.html">Freelancers</a></li>
+   
+        <li class="nav-item"><a class="nav-link text-white" href="flenlist.html">Enlist as a freelancer</a></li>
+           <li class="nav-item"><a class="nav-link text-white" href="#">Terms and Conditions</a></li>
+      <!-- Add other links -->
+    </ul>
+  </div>
+</nav>
+<!-- Jumbotron Section -->
+
+ 
+<section class="technicians-by-location p-4 mt-4">
+  <div class="  ">  
+      
+   
+ 
+    <div class="h mt-5">
+        <!-- Technician Details Section -->
+        <section id="technicianDetails">
+            <div class="card mb-3">
+                <div class="card-header">
+                    Technician Details
+                </div>
+                <div class="card-body">
+                    <!-- Technician profile image and information -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://img.freepik.com/free-photo/portrait-african-american-man_23-2149072178.jpg" class="img-fluid   mb-3" alt="Technician Image">
+                        </div>
+                        <div class="col-md-8">
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text">Gender: Male</p>
+                            <p class="card-text">Location: Mombasa, mtwapa area, Bamburi area.</p>
+                             
+                            <p class="card-text">Work Experience: 5+ years</p>
+                            <p class="card-text">Ratings : 3.4 </p>
+                            <!-- More details -->
+                        </div>
+                        <p class="container text-justify"> Hello, I'm [Technician's Name], a passionate minor carpentry expert dedicated to bringing quality craftsmanship to your doorstep. With years of experience in the art of fine woodworking, I specialize in handling minor carpentry projects, whether it's crafting bespoke shelves, repairing furniture, or enhancing your living space with custom woodwork.
+
+My commitment to precision and attention to detail ensures that every project is completed with excellence. I take pride in delivering tailored solutions that not only meet your needs but exceed your expectations.
+
+From repairs to enhancements, I aim to transform your spaces into functional and aesthetically pleasing areas that reflect your unique style and preferences.
+
+I'm here to bring your vision to life, one finely crafted piece at a time </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Offered Section -->
+   <section id="servicesOffered">
+    <div class="card mb-3">
+        <div class="card-header">
+            Services Offered
+        </div>
+        <div class="card-body">
+            <!-- Services offered by the technician -->
+            <p id="servicesParagraph"> Service 1, service 2, service 3, service 4, service 5</p>
+        </div>
+    </div>
+</section>
+
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <div class="card mb-3">
+                
+    <div class="card-header">
+        Client Feedback
+    </div>
+    <div class="card-body">
+        <ul class="nav nav-tabs" id="feedbackTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="positive-tab" data-toggle="tab" href="#positive" role="tab" aria-controls="positive" aria-selected="true">Positive</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="negative-tab" data-toggle="tab" href="#negative" role="tab" aria-controls="negative" aria-selected="false">Negative</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="neutral-tab" data-toggle="tab" href="#neutral" role="tab" aria-controls="neutral" aria-selected="false">Neutral</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="feedbackTabsContent">
+            <div class="tab-pane fade show active" id="positive" role="tabpanel" aria-labelledby="positive-tab">
+                <!-- Positive feedback -->
+                <div class="media mb-3">
+                    <div class="media-body">
+                        <h5 class="mt-0">Peter James</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="mr-2">
+                                <!-- Star rating -->
+                                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            </div>
+                            <small class="text-muted mr-2">Posted on 10th Dec, 2023</small>
+                        </div>
+                        <p>Absolutely impressed with the exceptional work! The carpenter skillfully fixed my broken chair, restoring it to its original form. Highly recommended for their craftsmanship and professionalism.</p>
+                        <!-- Client-submitted images with the review -->
+                        <img src="https://media.istockphoto.com/id/1265520647/photo/broken-chair-woman-is-holding-it-in-hands-old-furniture.jpg?s=612x612&w=0&k=20&c=arE9e8oOihOZH_YrfBlolcpB6qGE2Wmqljje-7hRlg4=" class="img-fluid" alt="Review Image" style="width: 100px; height: 100px; object-fit: cover;">
+                           <img src="https://www.familyhandyman.com/wp-content/uploads/2017/06/FHM-How-to-Fix-a-Wobbly-Chair-GettyImages-523046168_KSedit.jpg?resize=522%2C522" class="img-fluid" alt="Review Image" style="width: 100px; height: 100px; object-fit: cover;">
+<img src="https://i.pinimg.com/736x/3d/6b/6c/3d6b6c46776ddc0a914a457c4c5bed6d.jpg" class="img-fluid" alt="Review Image" style="width: 100px; height: 100px; object-fit: cover;">
+                    </div>
+                </div>
+                <!-- More positive reviews -->
+            </div>
+            <div class="tab-pane fade" id="negative" role="tabpanel" aria-labelledby="negative-tab">
+                <!-- Negative feedback -->
+                <!-- Include similar structure as above for negative feedback -->
+            </div>
+            <div class="tab-pane fade" id="neutral" role="tabpanel" aria-labelledby="neutral-tab">
+                <!-- Neutral feedback -->
+                <!-- Include similar structure as above for neutral feedback -->
+            </div>
+        </div>
+    </div>
+ 
+  
+            </div>
+        </section>
+
+        <!-- Technician's Work Images Section -->
+        <section id="technicianWorkImages">
+            <div class="card mb-3">
+                <div class="card-header">
+                    Technician's Work Images (Some)
+                </div>
+                <div class="card-body">
+                    <!-- Images showcasing technician's work -->
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <img src="https://media.licdn.com/dms/image/C4E12AQEG0s7y5b-_5g/article-cover_image-shrink_720_1280/0/1605310944887?e=2147483647&v=beta&t=HcaGUyJiPoD03k_eujsKvsQEmVThdNppkSnP_x88pdw" class="img-fluid" alt="Work Image 1">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="https://www.shutterstock.com/image-photo/carpenter-sanding-plank-his-workshop-260nw-340576388.jpg" class="img-fluid" alt="Work Image 2">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="https://media.istockphoto.com/id/1222764950/photo/male-craftsman-in-carpentry-workshop-for-bamboo-bicycles-doing-accounts-on-laptop.jpg?s=170667a&w=is&k=20&c=u83svOEagjw-3A6wjOJBcvG4vfmNrh_MZ91j-QbsYJU=" class="img-fluid" alt="Work Image 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Technician Button -->
+        <section id="contactTechnician">
+            <div class="text-center">
+                <a class="btn btn-primary btn-block btn-lg" href="tel:+254794148461">Contact This One</a>
+                 
+            </div>
+        </section>
+    </div>
+  </div>
+</section>
+
+<hr>
+<!-- Technicians by Location Section -->
+<section class="technicians-by-location pt-4 mt-4">
+  <div class="containber p-3"> 
+      <h1 class="text-center"><span id="servicetext"> </span> Other Service providers in Your Area</h1>
+      <div class="n"> <p class="text-center p-4"> Select any of  available service providers and they will reach back as soon as they can. </p></div>
+  <hr>
+  <div class="card-deck">
+    <div class="row"> 
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-3">
+<div class="card  fl-card" >
+  <img src="https://img.freepik.com/free-photo/portrait-african-american-man_23-2149072178.jpg" class="  " alt="Freelancer Image">
+  <div class="card-body">
+   
+    <p class="card-text clamp"><b>John Doe </b><br>Experienced plumber specializing in household repairs and installations.</p>
+  <div class="ratings">
+  <div class="d-flex align-items-center">
+    <span class="mr-2">
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star-half-alt text-primary"></i>
+    </span>
+    <span class="text-muted">(142 reviews)</span>
+  </div>
+</div>
+    <div class="areas-available">
+      <h6>Areas Available:</h6>
+     <ul class="horizontal-list">
+  <li>Kilifi</li>
+  <li>Mombasa</li>
+  <li>Nairobi</li>
+  <li>Eldoret</li>
+</ul>
+    </div>
+      <a class="btn btn-primary btn-block" href="flprofile.html?flid=1">View</a>              <a class="btn btn-primary btn-block" href="tel:+254794148461">Contact</a>
+  </div>
+</div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-3">
+<div class="card fl-card">
+  <img src="https://images.pexels.com/photos/718978/pexels-photo-718978.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="" alt="Freelancer Image">
+  <div class="card-body"> 
+    <p class="card-text clamp"><b>John Doe </b><br>Experienced nail technician specializing in creative designs and manicure services.</p>
+  <div class="ratings">
+  <div class="d-flex align-items-center">
+    <span class="mr-2">
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star-half-alt text-primary"></i>
+    </span>
+    <span class="text-muted">(142 reviews)</span>
+  </div>
+</div>
+    <div class="areas-available">
+      <h6>Areas Available:</h6>
+      <ul class="horizontal-list">
+        <li>Kilifi</li>
+        <li>Mombasa</li>
+        <li>Nairobi</li>
+        <li>Eldoret</li>
+      </ul>
+    </div>
+       <a class="btn btn-primary btn-block" href="flprofile.html?flid=1">View</a>              <a class="btn btn-primary btn-block" href="tel:+254794148461">Contact</a>
+  </div>
+</div>
+
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-3">
+<div class="card fl-card" >
+  <img src="https://www.shutterstock.com/image-photo/closeup-portrait-bald-bearded-african-600nw-2265013783.jpg" class="  " alt="Freelancer Image">
+  <div class="card-body"> 
+    <p class="card-text clamp  "><b>John Doe </b><br>Experienced fimigator specializing in household pest control and installations.</p>
+    <div class="ratings">
+  <div class="d-flex align-items-center">
+    <span class="mr-2">
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+    
+    </span>
+    <span class="text-muted">(142 reviews)</span>
+  </div>
+</div>
+    <div class="areas-available">
+      <h6>Areas Available:</h6>
+     <ul class="horizontal-list">
+  <li>Kilifi</li>
+  <li>Mombasa</li>
+  <li>Nairobi</li>
+  <li>Eldoret</li>
+</ul>
+    </div>
+       <a class="btn btn-primary btn-block" href="flprofile.html?flid=1">View</a>              <a class="btn btn-primary btn-block" href="tel:+254794148461">Contact</a>
+  </div>
+</div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-3">
+<div class="card fl-card" >
+  <img src="https://www.shutterstock.com/image-photo/portrait-healthy-happy-middleaged-african-600nw-1864631416.jpg" class="  " alt="Freelancer Image">
+  <div class="card-body"> 
+    <p class="card-text clamp"><b>John Doe </b><br>i run errands that involve small loads like getting shopping etc. .</p>
+  <div class="ratings">
+  <div class="d-flex align-items-center">
+    <span class="mr-2">
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star-half-alt text-primary"></i>
+    </span>
+    <span class="text-muted">(142 reviews)</span>
+  </div>
+</div>
+    <div class="areas-available">
+      <h6>Areas Available:</h6>
+     <ul class="horizontal-list">
+  <li>Kilifi</li>
+  <li>Mombasa</li>
+  <li>Nairobi</li>
+  <li>Eldoret</li>
+</ul>
+    </div>
+       <a class="btn btn-primary btn-block" href="flprofile.html?flid=1">View</a>              <a class="btn btn-primary btn-block" href="tel:+254794148461">Contact</a>
+  </div>
+</div>
+        </div>
+        
+
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-3">
+<div class="card fl-card" >
+  <img src="https://www.shutterstock.com/image-photo/portrait-healthy-happy-middleaged-african-600nw-1864631416.jpg" class="  " alt="Freelancer Image">
+  <div class="card-body"> 
+    <p class="card-text clamp"><b>John Doe </b><br>i run errands that involve small loads like getting shopping etc. .</p>
+  <div class="ratings">
+  <div class="d-flex align-items-center">
+    <span class="mr-2">
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star-half-alt text-primary"></i>
+    </span>
+    <span class="text-muted">(142 reviews)</span>
+  </div>
+</div>
+    <div class="areas-available">
+      <h6>Areas Available:</h6>
+     <ul class="horizontal-list">
+  <li>Kilifi</li>
+  <li>Mombasa</li>
+  <li>Nairobi</li>
+  <li>Eldoret</li>
+</ul>
+    </div>
+       <a class="btn btn-primary btn-block" href="flprofile.html?flid=1">View</a>              <a class="btn btn-primary btn-block" href="tel:+254794148461">Contact</a>
+  </div>
+</div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-3">
+<div class="card fl-card" >
+  <img src="https://www.shutterstock.com/image-photo/closeup-portrait-bald-bearded-african-600nw-2265013783.jpg" class="  " alt="Freelancer Image">
+  <div class="card-body"> 
+    <p class="card-text clamp  "><b>John Doe </b><br>Experienced fimigator specializing in household pest control and installations.</p>
+    <div class="ratings">
+  <div class="d-flex align-items-center">
+    <span class="mr-2">
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+    
+    </span>
+    <span class="text-muted">(142 reviews)</span>
+  </div>
+</div>
+    <div class="areas-available">
+      <h6>Areas Available:</h6>
+     <ul class="horizontal-list">
+  <li>Kilifi</li>
+  <li>Mombasa</li>
+  <li>Nairobi</li>
+  <li>Eldoret</li>
+</ul>
+    </div>
+       <a class="btn btn-primary btn-block" href="flprofile.html?flid=1">View</a>              <a class="btn btn-primary btn-block" href="tel:+254794148461">Contact</a>
+  </div>
+</div>
+        </div>
+        
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-3">
+<div class="card fl-card" >
+  <img src="https://www.shutterstock.com/image-photo/portrait-healthy-happy-middleaged-african-600nw-1864631416.jpg" class="  " alt="Freelancer Image">
+  <div class="card-body"> 
+    <p class="card-text clamp"><b>John Doe </b><br>i run errands that involve small loads like getting shopping etc. .</p>
+  <div class="ratings">
+  <div class="d-flex align-items-center">
+    <span class="mr-2">
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star text-primary"></i>
+      <i class="fas fa-star-half-alt text-primary"></i>
+    </span>
+    <span class="text-muted">(142 reviews)</span>
+  </div>
+</div>
+    <div class="areas-available">
+      <h6>Areas Available:</h6>
+     <ul class="horizontal-list">
+  <li>Kilifi</li>
+  <li>Mombasa</li>
+  <li>Nairobi</li>
+  <li>Eldoret</li>
+</ul>
+    </div>
+       <a class="btn btn-primary btn-block" href="flprofile.html?flid=1">View</a>              <a class="btn btn-primary btn-block" href="tel:+254794148461">Contact</a>
+  </div>
+</div>
+        </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- Footer -->
+    <hr>
+    
+    <hr>
+<footer class="bg-dark text-center text-lg-start text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a> Peep
+   <!-- whatsapp -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-whatsapp"></i></a>Peep
+      <!-- Instagram -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>Peep
+   <!-- Twitter -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>Peep
+
+    </section>
+    <!-- Section: Social media -->
+
+
+  
+    <!-- Section: Form -->
+ <!-- Section: Links -->
+<section class="">
+    <!-- Grid row -->
+    <div class="row">
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          
+            <ul class="list-unstyled mb-0 text-left">
+                <li>
+                    <a href="#!" class="text-white">Home Page</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">Services Available</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">Locations you can find us</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">Enlist as a Freelancer</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        
+            <ul class="list-unstyled mb-0 text-left">
+                <li>
+                    <a href="#!" class="text-white">Terms and Conditions</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">User Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">Customer Protection</a>
+                </li>
+             
+            </ul>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          
+            <ul class="list-unstyled mb-0 text-left">
+                <li>
+                    <a href="#!" class="text-white">Mobile: </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">0794148461</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">0733333333</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">info@peep.com</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column --> 
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+               <div class="form-group">
+                    <input type="email" class="form-control" id="emailInput" placeholder="Enter email">
+                </div>
+            <form action="/submit-form" method="POST">
+             
+                <div class="form-group">
+                    <textarea class="form-control" id="textInput" rows="3" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+</section>
+
+    <!-- Section: Links -->
+
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">Jobmuhia</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Your custom JavaScript -->
+<script src="scripts.js"></script>
+    <script>
+  $(document).ready(function () {
+    let lastScrollTop = 0;
+    $(window).scroll(function () {
+      let currentScroll = $(this).scrollTop();
+      if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        $('#navbar').css('transform', 'translateY(-100%)');
+      } else {
+        // Scrolling up
+        $('#navbar').css('transform', 'translateY(0)');
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  const urlParams = new URLSearchParams(window.location.search);
+    const services = urlParams.get('services');
+
+    // Show the received parameter in an alert
+//    alert(services);    
+      
+    $('#servicetext').text(services);
+  });
+</script>
+ 
+    
+</body>
+</html>
